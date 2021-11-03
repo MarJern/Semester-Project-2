@@ -1,0 +1,23 @@
+.nav-item {
+    a {
+        text-decoration: none;
+        color: $colour-dark-grey;
+        padding-right: 1rem;
+    }
+
+    a.active {
+        color: $colour-green-grey;
+        font-weight: 600;
+    }
+}
+.navbar {
+    width: 100%;
+}
+
+.breadcrumb {
+    font-size: .7rem;
+}
+
+.search__btn {
+
+}

@@ -1,0 +1,40 @@
+.form-control {
+    font-size: .8rem;
+}
+.search__input {
+    height: 30px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid $colour-green-grey;
+}
+.search__btn {
+    height: 30px;
+    margin-top: 0 !important;
+    background-color: $colour-green-grey;
+    border: $colour-green-grey;
+    border-radius: 0 5px 5px 0;
+    color: white;
+}
+.newsletter__input {
+    border: 1px solid $colour-green-grey;
+}
+
+.form__small__text {
+    font-size: .8rem;
+}
+
+.delete__button {
+    background-color: $colour-light-grey;
+    color: black;
+    border: $colour-light-grey;
+}
+
+.add__img__btn {
+    // background-color: $colour-green-grey;
+    // border: $colour-green-grey;
+    // border-radius: 0 5px 5px 0;
+    // color: white;
+}
+
+.upload__image {
+    height: 28px;
+}

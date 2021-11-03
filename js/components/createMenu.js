@@ -9,7 +9,7 @@ export default function createMenu() {
 
     const username = getUsername();
 
-    let loggedInIcon = `<a href"/login.html"><i class="fas fa-user navbar-link"></i></a>`;
+    let loggedInIcon = `<a href"/login.html"><i class="fas fa-user navbar-link p-3 fa-lg"></i></a>`;
 
     if(username) {
         loggedInIcon = `<a href"/profilepage.html"><i class="fas fa-user navbar-link"></i></a>`;
@@ -27,7 +27,7 @@ export default function createMenu() {
                                 </button>
                                 <div class="nav__icons order-3">
                                     ${loggedInIcon}
-                                    <a href""><i class="fas fa-shopping-bag navbar-link"></i></a>
+                                    <a href""><i class="fas fa-shopping-bag navbar-link p-3 fa-lg"></i></a>
                                 </div>
                                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">

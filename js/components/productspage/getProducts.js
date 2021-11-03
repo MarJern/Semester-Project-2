@@ -5,6 +5,7 @@ const productsURL = baseUrl + "/products";
 
 export async function getProducts() {
     const productsContainer = document.querySelector(".products__container");
+    const messageContainer = document.querySelector(".message__container");
     
 
     try {
@@ -16,19 +17,19 @@ export async function getProducts() {
 
         json.forEach(function (products) {
             productsContainer.innerHTML += 
-            `<div class="col-md shadow-sm p-3 mb-5 rounded home__featured__card">
-                <img src="${baseUrl + products.image.url}" class="card-img-top home__featured__image" alt="${products.image.alternativeText}">
+            `<div class="col-md shadow-sm p-3 mb-5 p-0 test">
+                <img src="${baseUrl + products.image.url}" class="card-img-top rounded-0 card__image" alt="${products.image.alternativeText}">
                 <div class="card-body">
                     <h3>${products.title}</h3>
                     <p class="card-text">$${products.price}</p>
-                    <a href="product-page.html?id=${products.id}" class="btn btn-primary stretched-link">View product</a>
+                    <a href="product-page.html?id=${products.id}" class="btn btn-primary stretched-link mt-3 shadow-none">View product</a>
                 </div>
             </div>`;
         
         });
 
     }catch(error) {
-        displayMessage("error", error, ".products__container");
+        displayMessage("error", error, ".message__container");
     };
 
 };

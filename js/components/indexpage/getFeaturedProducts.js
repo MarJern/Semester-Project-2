@@ -14,13 +14,13 @@ export async function getFeatured() {
         featuredContainer.innerHTML = "";
         json.forEach(function (featured) {
             featuredContainer.innerHTML += 
-            `<div class="col-md shadow-sm p-3 mb-5 rounded card">
-                <img class="" src="${baseUrl + featured.image.url}" alt="${featured.image.alternativeText}.name">
-                <div class="card-body">
+            `<div class="col-md shadow-sm p-3 mb-5 card p-0 rounded-0 border-0">
+                <img class="card__image mb-2" src="${baseUrl + featured.image.url}" alt="${featured.image.alternativeText}.name">
+                <div class="card-body p-0">
                     <h3>${featured.title}</h3>
                     <p class="${featured.price}">$20.55
                     </p>
-                    <a href="product-page.html?id=${featured.id}" class="btn btn-primary stretched-link">View product</a>
+                    <a href="product-page.html?id=${featured.id}" class="btn btn-primary stretched-link mt-3 shadow-none">View product</a>
                 </div>
             </div>`;
         });
