@@ -17,100 +17,78 @@
     <body>
         <div class="wrapper" id="top">
             <!-- -------NAVBAR------- -->
-            <nav class="navbar navbar-expand-lg navbar-light navbar__container px-3">
+            <nav class="navbar navbar-expand-lg navbar-light navbar__container px-3 bg-white">
             </nav>
             <!-- -------BREADCRUMB------- -->
-            <nav aria-label="breadcrumb">
+            <nav aria-label="breadcrumb" class="px-3 pt-2">
                 <ol class="breadcrumb breadcrumb__list">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                     <li class="breadcrumb-item"><a href="products.html">Products</a></li>
                 </ol>
             </nav>
             <!-- -------PRODUCT TITLE------- -->
-            <section class="container product__header">
+            <section class="container product__header px-3">
             </section>
             <!-- -------PRODUCT DETAILS------- -->
-            <section>
+            <section class="container px-3 card__block">
                 <div class="row justify-content-between">
-                    <div class="col-md p-3 mb-5 rounded product__card">
-                        <!-- <img src="./test-images/pexels-hipkicks-6776613.jpg" class="card-img-top home__featured__image" alt="...">
-                        <div class="card-body list-group">
-                            <h3 class="list-group-item list-group-item-action">Title</h3>
-                            <div class="accordion list-group-item list-group-item-action" id="accordionExample">
-                                <div class="card">
-                                    <div class="card-header" id="headingOne">
-                                        <h3 class="mb-0">
-                                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            Description 
-                                            <i class="fas fa-chevron-down"></i>
-                                        </button>
-                                        </h3>
-                                    </div>
-                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                        <div class="card-body">
-                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="card-text list-group-item list-group-item-action">$20.55</p>
-                            <a href="#" class="btn btn-primary">
-                                Add to cart 
-                                <i class="fas fa-shopping-bag"></i>
-                            </a>
-                        </div> -->
+                    <div class="message__container"></div>
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <div class="col-md mb-5 product__card p-0">
                     </div>
                 </div>
             </section>
             <!-- -------TO TOP------- -->
-            <section class="container">
+            <section class="container mb-4 totop p-0">
                 <a href="#top">To the top
                     <i class="fas fa-arrow-up"></i>
                 </a>
             </section>
         </div>
         <!-- -------FOOTER------- -->
-        <footer class="container footer">
+        <footer class="container-fluid px-3 pt-4">
             <div class="row justify-content-between">
-                <div>
+                <div class="col-md footer__block my-4 w-75">
                     <h4 class="footer__heading">Sign up for our newsletter</h4>
                     <form>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email address">
+                                <input type="email" class="form-control mb-2 newsletter__input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email address">
                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary mt-2 mt-3">Submit</button>
                     </form>
                 </div>
-                <div class="col-md">
+                <div class="col-md footer__block my-4">
                     <h4 class="footer__heading">Follow Us</h4>
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-facebook-f fa-2x p-0"></i>
+                    <i class="fab fa-instagram fa-2x"></i>
+                    <i class="fab fa-twitter fa-2x"></i>
                 </div>
-                <div class="list-group col-md">
-                    <h4 class="footer__heading">Title</h4>
-                    <a href="#" class="list-group-item list-group-item-action">Contact us</a>
-                    <a href="#" class="list-group-item list-group-item-action">FAQ</a>
-                    <a href="#" class="list-group-item list-group-item-action">Shipping</a>
-                    <a href="#" class="list-group-item list-group-item-action">Returns</a>
+                <div class="list-group col-md footer__block my-4">
+                    <h4 class="mx-3">Customer Service</h4>
+                    <a href="#" class="list-group-item list-group-item-action bg-transparent border-0">FAQ</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-transparent border-0">Shipping</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-transparent border-0">Returns</a>
                 </div>
-                <div class="list-group col-md">
-                    <h4 class="footer__eading">Title</h4>
-                    <a href="#" class="list-group-item list-group-item-action">About us</a>
-                    <a href="#" class="list-group-item list-group-item-action">Our stores</a>
-                    <a href="login.html" class="list-group-item list-group-item-action">Login</a>
+                <div class="list-group col-md footer__block my-4">
+                    <h4 class="mx-3">Sneaks</h4>
+                    <a href="#" class="list-group-item list-group-item-action bg-transparent border-0">Contact us</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-transparent border-0">About us</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-transparent border-0">Our stores</a>
+                    <a href="login.html" class="list-group-item list-group-item-action bg-transparent border-0">Login</a>
                 </div>
             </div>
-            <div class="row justify-content-between mb-1"> 
-                <div class=" col-md footer__policies footer__block">
-                    <div class="col">
-                        <a href="#">Terms and Conditions</a> 
-                    </div>
-                    <div class="col">
-                        <a href="#">Privacy Policy</a>
-                    </div>
+            <div class="d-flex justify-content-center mb-1"> 
+                <div class=" px-2">
+                    <a href="#">Terms & Conditions</a> 
+                </div>
+                <div class=" px-2">
+                    <p>|</p> 
+                </div>
+                <div class="px-2">
+                    <a href="#">Privacy Policy</a>
                 </div>
             </div>
         </footer>

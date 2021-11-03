@@ -9,10 +9,10 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="WRITE SOMETHINE HERE" />
+        <meta name="description" content="Administrator page for editing products" />
         <meta name="author" content="MJ" />
         <link href="./css/style.css" rel="stylesheet" />
-        <title>WRITE SOMETHING HERE</title>
+        <title>Sneaks | Add product</title>
     </head>
     <body>
         <div class="wrapper" id="top">
@@ -20,7 +20,7 @@
             <nav class="navbar navbar-expand-lg navbar-light navbar__container px-3">
             </nav>
             <!-- -------BREADCRUMB------- -->
-            <nav aria-label="breadcrumb">
+            <nav aria-label="breadcrumb" class="px-3">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                     <li class="breadcrumb-item"><a href="profilepage.html">Profile page</a></li>
@@ -32,93 +32,88 @@
                 <h1>Add Product</h1>
             </section>
             <!-- -------ADD  FORM------- -->
-            <section class="container shadow-sm p-3 mb-5 rounded">
+            <section class="container mb-5">
                 <div class="message__container"></div>
-                <form class="add__form">
-                    <div class="message__container"></div>
-                    <div class="form-group">
+                <form class="add__form shadow-sm bg-white rounded-0 mt-3 p-3">
+                    <div class="form-group my-3">
                         <label for="productname">Product name</label>
-                        <input type="name" class="form-control" id="productname" aria-describedby="editProductName" placeholder="Name">
+                        <input type="name" class="form-control mt-1" id="productname" aria-describedby="editProductName" placeholder="Name">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group my-3">
                         <label for="productprice">Product price</label>
-                        <input type="price" class="form-control" id="productprice" aria-describedby="editProductName" placeholder="Price">
+                        <input type="price" class="form-control mt-1" id="productprice" aria-describedby="editProductName" placeholder="Price">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group my-3">
                         <label for="productdescription">Description</label>
-                        <textarea class="form-control" id="productdescription" rows="3" placeholder="Add description"></textarea>
+                        <textarea class="form-control mt-1" id="productdescription" rows="3" placeholder="Add description"></textarea>
                     </div>
-                    <div>
-                        <label>Is it a featured product?</label>
-                        <div class="form-check">
-                            <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1">Yes
-                            <label class="form-check-label" for="radio1"></label>
-                        </div>
-                        <div class="form-check">
-                            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">No
-                            <label class="form-check-label" for="radio2"></label>
-                        </div>
+                    <div class="my-3">
+                        <label class="mr-4">Is it a featured product?</label>
+                        <select name="featured" class="form-select toggleFeaturedProduct form__small__text mt-1">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
                     </div>
-                    <div>
-                        <label>Add image</label>
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="addImage">
-                            <label class="custom-file-label" for="addImage">Choose file</label>
+                    <div class="my-3">
+                        <label class="mb-2">Add image</label>
+                        <div class="input-group mb-3">
+                            <input type="file" class="form-control upload__image" id="inputGroupFile02">
+                            <label class="input-group-text upload__image form__small__text" for="inputGroupFile02">Upload</label>
                         </div>
                     </div>
                     <input id="id" type="hidden" />
-                    <button type="submit" class="btn btn-primary">Add product</button>
+                    <button type="submit" class="btn btn-primary my-3">Add product</button>
                 </form>
             </section>
             <!-- -------TO TOP------- -->
-            <section class="container">
+            <section class="container mb-4 totop p-0">
                 <a href="#top">To the top
                     <i class="fas fa-arrow-up"></i>
                 </a>
             </section>
         </div>
         <!-- -------FOOTER------- -->
-        <footer class="container footer">
+        <footer class="container-fluid px-3 pt-4">
             <div class="row justify-content-between">
-                <div>
+                <div class="col-md footer__block my-4 w-75">
                     <h4 class="footer__heading">Sign up for our newsletter</h4>
                     <form>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email address">
+                                <input type="email" class="form-control mb-2 newsletter__input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email address">
                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary mt-2 mt-3">Submit</button>
                     </form>
                 </div>
-                <div class="col-md">
+                <div class="col-md footer__block my-4">
                     <h4 class="footer__heading">Follow Us</h4>
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-facebook-f fa-2x p-0"></i>
+                    <i class="fab fa-instagram fa-2x"></i>
+                    <i class="fab fa-twitter fa-2x"></i>
                 </div>
-                <div class="list-group col-md">
-                    <h4 class="footer__heading">Title</h4>
-                    <a href="#" class="list-group-item list-group-item-action">Contact us</a>
-                    <a href="#" class="list-group-item list-group-item-action">FAQ</a>
-                    <a href="#" class="list-group-item list-group-item-action">Shipping</a>
-                    <a href="#" class="list-group-item list-group-item-action">Returns</a>
+                <div class="list-group col-md footer__block my-4">
+                    <h4 class="mx-3">Customer Service</h4>
+                    <a href="#" class="list-group-item list-group-item-action bg-transparent border-0">FAQ</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-transparent border-0">Shipping</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-transparent border-0">Returns</a>
                 </div>
-                <div class="list-group col-md">
-                    <h4 class="footer__eading">Title</h4>
-                    <a href="#" class="list-group-item list-group-item-action">About us</a>
-                    <a href="#" class="list-group-item list-group-item-action">Our stores</a>
-                    <a href="login.html" class="list-group-item list-group-item-action">Login</a>
+                <div class="list-group col-md footer__block my-4">
+                    <h4 class="mx-3">Sneaks</h4>
+                    <a href="#" class="list-group-item list-group-item-action bg-transparent border-0">Contact us</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-transparent border-0">About us</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-transparent border-0">Our stores</a>
+                    <a href="login.html" class="list-group-item list-group-item-action bg-transparent border-0">Login</a>
                 </div>
             </div>
-            <div class="row justify-content-between mb-1"> 
-                <div class=" col-md footer__policies footer__block">
-                    <div class="col">
-                        <a href="#">Terms and Conditions</a> 
-                    </div>
-                    <div class="col">
-                        <a href="#">Privacy Policy</a>
-                    </div>
+            <div class="d-flex justify-content-center mb-1"> 
+                <div class=" px-2">
+                    <a href="#">Terms & Conditions</a> 
+                </div>
+                <div class=" px-2">
+                    <p>|</p> 
+                </div>
+                <div class="px-2">
+                    <a href="#">Privacy Policy</a>
                 </div>
             </div>
         </footer>
