@@ -7,7 +7,6 @@ export async function getProducts() {
     const productsContainer = document.querySelector(".products__container");
     const messageContainer = document.querySelector(".message__container");
     
-
     try {
         const results = await fetch(productsURL);
         const json = await results.json();
@@ -29,7 +28,7 @@ export async function getProducts() {
         });
 
     }catch(error) {
-        displayMessage("error", error, ".message__container");
+        displayMessage("error", "Something went wrong when loading the products", ".message__container");
     };
 
 };
