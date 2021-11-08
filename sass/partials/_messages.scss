@@ -1,18 +1,18 @@
 .message {
     width: 100%;
     padding: 1rem;
-    border: 1px solid grey;
-    color: grey;
+    border: 1px solid $colour-light-grey;
+    color: $colour-light-grey;
 }
 
 .message.error {
-    border-color: red;
-    color: white;
-    background: red;
+    border-color: rgb(245, 22, 22);
+    color: black;
+    background: rgba(245, 22, 22, .4);
 }
 
 .message.success {
-    border-color: green;
-    color: white;
-    background: green;
+    border-color: rgb(9, 230, 28);
+    color: black;
+    background: rgba(10, 156, 22, .4);
 }

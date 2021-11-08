@@ -5,7 +5,6 @@ const productsURL = baseUrl + "/products";
 
 export async function getProducts() {
     const productsContainer = document.querySelector(".products__container");
-    const messageContainer = document.querySelector(".message__container");
     
     try {
         const results = await fetch(productsURL);
@@ -16,7 +15,7 @@ export async function getProducts() {
 
         json.forEach(function (products) {
             productsContainer.innerHTML += 
-            `<div class="col-md shadow-sm p-3 mb-5 p-0 test">
+            `<div class="col-md-5 col-lg-3 shadow-sm p-3 mb-5 p-0 card rounded-0">
                 <img src="${baseUrl + products.image.url}" class="card-img-top rounded-0 card__image" alt="${products.image.alternativeText}">
                 <div class="card-body">
                     <h3>${products.title}</h3>
@@ -28,7 +27,7 @@ export async function getProducts() {
         });
 
     }catch(error) {
-        displayMessage("error", "Something went wrong when loading the products", ".message__container");
+        displayMessage("error", "Something went wrong when loading the products", ".products__container");
     };
 
 };

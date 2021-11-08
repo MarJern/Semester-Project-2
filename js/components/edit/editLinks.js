@@ -1,8 +1,6 @@
 import { baseUrl } from "../../constants/api.js";
 import displayMessage from "../displayMessage.js";
 
-const message = document.querySelector(".message__container");
-
 const queryString = document.location.search;
 
 const params = new URLSearchParams(queryString);
@@ -15,20 +13,6 @@ if(!id) {
 
 const productUrl = baseUrl + "/products/" + id;
 
-export async function productName() {
-
-    try {
-        const response = await fetch(productUrl);
-        const name = await response.json();
-        const titleContainer = document.querySelector(".product__header");
-
-        titleContainer.innerHTML +=`<h1>${name.title}</h1>`;
-    
-    }catch(error) {
-        displayMessage("error", "error", ".message__container");
-    }
-};
-
 export async function breadcrumbName() {
 
     try {
@@ -39,7 +23,7 @@ export async function breadcrumbName() {
         breadcrumbContainer.innerHTML +=`<li class="breadcrumb-item active" aria-current="page">${name.title}</li>`;
     
     }catch(error) {
-        displayMessage("error", "error", ".message__container");
+        displayMessage("error", "error", ".breadcrumb__list");
     }
 };
 
@@ -50,8 +34,6 @@ export async function setTitle() {
         const name = await response.json();
 
         document.title = `Sneaks | ${name.title}`;
-
-        console.log(document.title);
     
     }catch(error) {
         displayMessage("error", "error", ".message__container");
@@ -64,12 +46,9 @@ export async function setMeta() {
         const response = await fetch(productUrl);
         const name = await response.json();
 
-        document.getElementsByTagName("META")[3].content = `Shop the new ${name.title} - latest in sneaker fashion.`;
-
-        console.log("META"[3]);
+        document.getElementsByTagName("META")[3].content = `Edit product by the name of ${name.title}.`;
     
     }catch(error) {
         displayMessage("error", "error", ".message__container");
     }
 };
-

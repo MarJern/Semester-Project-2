@@ -31,11 +31,8 @@ function submitForm(event) {
     const featuredValue = featured === "Yes" ? true : false;
     const imageValue = image.value.trim();
 
-    console.log(featured);
-    console.log(image);
-
     if (nameValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0) {
-        return displayMessage("warning", "Please prove proper values", ".message__container");
+        return displayMessage("error", "Please provide proper values", ".message__container");
     }
 
     addProduct(nameValue, priceValue, descriptionValue, featuredValue, imageValue);
@@ -67,7 +64,6 @@ async function addProduct(nameValue, priceValue, descriptionValue, featuredValue
             displayMessage("error", json.message, ".message__container");
         }
 
-        console.log(json);
     }
     catch(error) {
         console.log(error);

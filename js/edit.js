@@ -3,6 +3,7 @@ import createMenu from "./components/createMenu.js";
 import displayMessage from "./components/displayMessage.js";
 import { getToken } from "./utils/storage.js";
 import deleteButton from "./components/edit/deleteButton.js";
+import { breadcrumbName, setTitle, setMeta } from './components/edit/editLinks.js'
 
 const token = getToken();
 if(!token) {
@@ -10,6 +11,9 @@ if(!token) {
 }
 
 createMenu();
+breadcrumbName();
+setTitle();
+setMeta();
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -43,7 +47,7 @@ const loading = document.querySelector(".loading");
         image.value = details.image;
         productId.value = details.id;
 
-        deleteButton(details.productId);
+        deleteButton(details.id);
 
     } catch (error) {
         console.log(error);
@@ -69,7 +73,7 @@ function submitForm(event) {
     const idValue = productId.value;
 
     if (nameValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0) {
-        return displayMessage("warning", "Error", ".message__container");
+        return displayMessage("Error", "There seems to be an error", ".message__container");
     }
 
     editProduct(nameValue, priceValue, descriptionValue, featuredValue, imageValue, idValue );
@@ -79,7 +83,7 @@ function submitForm(event) {
 async function editProduct(nameValue, priceValue, descriptionValue, featuredValue, imageValue, idValue) {
 
     const url = baseUrl + "/products/" + id;
-    const data = JSON.stringify({ title: nameValue, price: priceValue, description: descriptionValue, image: imageValue, featured: featuredValue, id: idValue });
+    const data = JSON.stringify({ title: nameValue, price: priceValue, description: descriptionValue, image: imageValue, featured: featuredValue, id: idValue});
 
     const options = {
         method: "PUT",
@@ -96,7 +100,6 @@ async function editProduct(nameValue, priceValue, descriptionValue, featuredValu
 
         if(json.updated_at) {
             displayMessage("success", "The product has been successfully edited", ".message__container");
-            form.reset();
         }
 
         if(json.error) {

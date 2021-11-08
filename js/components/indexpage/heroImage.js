@@ -22,6 +22,6 @@ export async function getHeroImage() {
         // });
 
     }catch(error) {
-        displayMessage("error", error, ".message_container");
+        displayMessage("error", "Something went wrong when loading the content", ".message_container");
     };
 };

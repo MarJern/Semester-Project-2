@@ -17,7 +17,7 @@ export async function editProducts() {
 
         json.forEach(function(edit) {
             editContainer.innerHTML += 
-            `<div class="col-md shadow-sm p-3 mb-5">
+            `<div class="col-md-5 col-lg-3 shadow-sm p-3 mb-5 card p-0 rounded-0">
                 <a href="#"><img src="${baseUrl + edit.image.url}" class="card__image" alt="${edit.image.alternativeText}"></a>
                 <div class="card-body">
                     <h3>${edit.title}</h3>

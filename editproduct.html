@@ -16,15 +16,14 @@
     <body>
         <div class="wrapper" id="top">
             <!-- -------NAVBAR------- -->
-            <nav class="navbar navbar-expand-lg navbar-light navbar__container px-3">
+            <nav class="navbar navbar-expand-lg navbar-light navbar__container bg-white pt-3 px-3">
             </nav>
             <!-- -------BREADCRUMB------- -->
             <nav aria-label="breadcrumb" class="px-3 pt-2">
-                <ol class="breadcrumb">
+                <ol class="breadcrumb breadcrumb__list">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                     <li class="breadcrumb-item"><a href="profilepage.html">Admin page</a></li>
-                    <li class="breadcrumb-item"><a href="listofproducts.html">Products</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Edit product</li>
+                    <li class="breadcrumb-item"><a href="listofproducts.html">Edit products</a></li>
                 </ol>
             </nav>
             <!-- -------SITE HEADER------- -->
@@ -33,9 +32,9 @@
             </section>
             <!-- -------ADD  FORM------- -->
             <section class="container mb-5">
-                <div class="loading"></div>
                 <form class="edit__form  shadow-sm bg-white rounded-0 mt-3 p-3">
                     <div class="message__container"></div>
+                    <div class="loading"></div>
                     <div class="form-group my-3">
                         <label for="productname">Product name</label>
                         <input type="name" class="form-control mt-1" id="productname" aria-describedby="editProductName" placeholder="Name">
@@ -61,7 +60,7 @@
                     </div>
                     <input id="id" type="hidden" />
                     <button type="submit" class="btn btn-primary my-3">Save edit</button>
-                    <div class="delete__container container"></div>
+                    <div class="delete__container"></div>
                 </form>
             </section>
             <!-- -------TO TOP------- -->
