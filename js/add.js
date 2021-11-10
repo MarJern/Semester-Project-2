@@ -14,7 +14,7 @@ const form = document.querySelector(".add__form");
 const name = document.querySelector("#productname");
 const price = document.querySelector("#productprice");
 const description = document.querySelector("#productdescription");
-const featured = document.querySelector(".toggleFeaturedProduct").value;
+const featured = document.querySelector(".toggleFeaturedProduct");
 const image = document.querySelector("#addImage");
 const message = document.querySelector(".message__container");
 
@@ -28,10 +28,10 @@ function submitForm(event) {
     const nameValue = name.value.trim();
     const priceValue = parseFloat(price.value);
     const descriptionValue = description.value.trim();
-    const featuredValue = featured === "Yes" ? true : false;
+    const featuredValue = JSON.parse(featured.value)
     const imageValue = image.value.trim();
 
-    if (nameValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0) {
+    if (nameValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0 || imageValue.length === 0) {
         return displayMessage("error", "Please provide proper values", ".message__container");
     }
 

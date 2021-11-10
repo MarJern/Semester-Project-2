@@ -1,5 +1,4 @@
 import createMenu from "./components/createMenu.js";
-import getCart from "./components/cartpage/getCart.js";
 import displayMessage from "./components/displayMessage.js";
 import { productDetails } from "./components/productsdetailpage/productDetails.js";
 
@@ -40,3 +39,5 @@ cart.forEach((item) => {
                                     ${item.id}
                                 </div>`;
 });
+
+const deleteCartButton = document.getElementsByClassName

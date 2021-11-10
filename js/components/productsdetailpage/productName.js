@@ -50,9 +50,7 @@ export async function setTitle() {
         const name = await response.json();
 
         document.title = `Sneaks | ${name.title}`;
-
-        console.log(document.title);
-    
+            
     }catch(error) {
         displayMessage("error", "error", ".message__container");
     }
@@ -64,10 +62,7 @@ export async function setMeta() {
         const response = await fetch(productUrl);
         const name = await response.json();
 
-        document.getElementsByTagName("META")[3].content = `Shop the new ${name.title} - latest in sneaker fashion.`;
-
-        console.log("META"[3]);
-    
+        document.getElementsByTagName("META")[3].content = `Shop the new ${name.title} - latest in sneaker fashion.`;    
     }catch(error) {
         displayMessage("error", "error", ".message__container");
     }

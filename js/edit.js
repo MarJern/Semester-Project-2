@@ -29,7 +29,7 @@ const form = document.querySelector(".edit__form");
 const name = document.querySelector("#productname");
 const price = document.querySelector("#productprice");
 const description = document.querySelector("#productdescription");
-const featured = document.querySelector(".toggleFeaturedProduct").value;
+const featured = document.querySelector(".toggleFeaturedProduct");
 const image = document.querySelector("#addImage");
 const productId = document.querySelector("#id");
 const message = document.querySelector(".message__container");
@@ -68,11 +68,11 @@ function submitForm(event) {
     const nameValue = name.value.trim();
     const priceValue = parseFloat(price.value);
     const descriptionValue = description.value.trim();
-    const featuredValue = featured === "Yes" ? true : false;
+    const featuredValue = JSON.parse(featured.value)
     const imageValue = image.value.trim();
     const idValue = productId.value;
 
-    if (nameValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0) {
+    if (nameValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0 || imageValue.length === 0) {
         return displayMessage("Error", "There seems to be an error", ".message__container");
     }
 

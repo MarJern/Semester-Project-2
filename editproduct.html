@@ -30,7 +30,7 @@
             <section class="container px-3">
                 <h1>Edit Product</h1>
             </section>
-            <!-- -------ADD  FORM------- -->
+            <!-- -------EDIT  FORM------- -->
             <section class="container mb-5">
                 <form class="edit__form  shadow-sm bg-white rounded-0 mt-3 p-3">
                     <div class="message__container"></div>
@@ -50,32 +50,31 @@
                     <div class="my-3">
                         <label class="mr-4">Is it a featured product?</label>
                         <select name="featured" class="form-select toggleFeaturedProduct form__small__text mt-1">
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
                         </select>
                     </div>
                     <div class="form-group my-3">
                         <label for="productprice">Add Image URL</label>
-                        <input type="url" class="form-control mt-1" id="addImage" aria-describedby="editProductName" placeholder="Image URL">
+                        <input type="url" value="" class="form-control mt-1" id="addImage" aria-describedby="editProductName" placeholder="Image URL">
                     </div>
                     <input id="id" type="hidden" />
                     <button type="submit" class="btn btn-primary my-3">Save edit</button>
                     <div class="delete__container"></div>
                 </form>
             </section>
-            <!-- -------TO TOP------- -->
-            <section class="container mb-4 totop p-0">
-                <a href="#top">To the top
-                    <i class="fas fa-arrow-up"></i>
-                </a>
-            </section>
         </div>
         <!-- -------FOOTER------- -->
         <footer class="container-fluid px-3 pt-4">
-            <div class="row justify-content-between">
-                <div class="col-md footer__block my-4 w-75">
-                    <h4 class="footer__heading">Sign up for our newsletter</h4>
-                    <form>
+            <div class="container mb-4 totop p-0">
+                <a href="#top">To the top
+                    <i class="fas fa-arrow-up"></i>
+                </a>
+            </div>
+            <div class="row justify-content-between ">
+                <div class="flex-md-column col-md footer__block my-4 d-md-flex my-4 w-75">
+                    <h4 class="footer__heading align-self-md-center">Sign up for our newsletter</h4>
+                    <form class="align-self-md-center">
                         <div class="form-group">
                                 <input type="email" class="form-control mb-2 newsletter__input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email address">
                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
@@ -83,24 +82,30 @@
                         <button type="submit" class="btn btn-primary mt-2 mt-3">Submit</button>
                     </form>
                 </div>
-                <div class="col-md footer__block my-4">
-                    <h4 class="footer__heading">Follow Us</h4>
-                    <i class="fab fa-facebook-f fa-2x p-0"></i>
-                    <i class="fab fa-instagram fa-2x"></i>
-                    <i class="fab fa-twitter fa-2x"></i>
+                <div class="flex-md-column col-md footer__block my-4 d-md-flex ">
+                    <h4 class="footer__heading align-self-center">Follow Us</h4>
+                    <div class="align-self-md-center">
+                        <i class="fab fa-facebook-f fa-2x p-0"></i>
+                        <i class="fab fa-instagram fa-2x"></i>
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </div>
                 </div>
                 <div class="list-group col-md footer__block my-4">
-                    <h4 class="mx-3">Customer Service</h4>
-                    <a href="#" class="list-group-item list-group-item-action bg-transparent border-0">FAQ</a>
-                    <a href="#" class="list-group-item list-group-item-action bg-transparent border-0">Shipping</a>
-                    <a href="#" class="list-group-item list-group-item-action bg-transparent border-0">Returns</a>
+                    <h4 class="mx-3 align-self-md-center">Support</h4>
+                    <div class="align-self-md-center">
+                        <a href="#" class="list-group-item list-group-item-action bg-transparent border-0">FAQ</a>
+                        <a href="#" class="list-group-item list-group-item-action bg-transparent border-0">Shipping</a>
+                        <a href="#" class="list-group-item list-group-item-action bg-transparent border-0">Returns</a>
+                    </div>
                 </div>
                 <div class="list-group col-md footer__block my-4">
-                    <h4 class="mx-3">Sneaks</h4>
-                    <a href="#" class="list-group-item list-group-item-action bg-transparent border-0">Contact us</a>
-                    <a href="#" class="list-group-item list-group-item-action bg-transparent border-0">About us</a>
-                    <a href="#" class="list-group-item list-group-item-action bg-transparent border-0">Our stores</a>
-                    <a href="login.html" class="list-group-item list-group-item-action bg-transparent border-0">Login</a>
+                    <h4 class="mx-3 align-self-md-center">Sneaks</h4>
+                    <div class="align-self-md-center">
+                        <a href="#" class="list-group-item list-group-item-action bg-transparent border-0">Contact us</a>
+                        <a href="#" class="list-group-item list-group-item-action bg-transparent border-0">About us</a>
+                        <a href="#" class="list-group-item list-group-item-action bg-transparent border-0">Our stores</a>
+                        <a href="/login.html" class="list-group-item list-group-item-action bg-transparent border-0">Login</a>
+                    </div>
                 </div>
             </div>
             <div class="d-flex justify-content-center mb-1"> 

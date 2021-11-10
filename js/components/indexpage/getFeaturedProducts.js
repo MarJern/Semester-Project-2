@@ -10,6 +10,7 @@ export async function getFeatured() {
     try{
         const response = await fetch(featuredUrl);
         const json = await response.json();
+    
 
         featuredContainer.innerHTML = "";
         json.forEach(function (featured) {
