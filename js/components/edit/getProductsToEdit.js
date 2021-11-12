@@ -17,12 +17,12 @@ export async function editProducts() {
 
         json.forEach(function(edit) {
             editContainer.innerHTML += 
-            `<div class="col-md-5 col-lg-3 shadow-sm p-3 mb-5 card p-0 rounded-0">
+            `<div class="col-md-5 col-lg-3 shadow-sm p-3 m-2 card rounded-0">
                 <a href="#"><img src="${baseUrl + edit.image.url}" class="card__image" alt="${edit.image.alternativeText}"></a>
                 <div class="card-body">
                     <h3>${edit.title}</h3>
                     <p class="card-text">$${edit.price}</p>
-                    <a href="editproduct.html?id=${edit.id}" class="btn btn-primary stretched-link">Edit product</a>
+                    <a href="edit-product.html?id=${edit.id}" class="btn btn-primary stretched-link">Edit product</a>
                 </div>
             </div>
             `;

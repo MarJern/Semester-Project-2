@@ -12,7 +12,7 @@ export default function createMenu() {
     let loginLink = `<a class="nav-link ${pathname === "/login.html" ? "active" : ""}" href="/login.html">Admin login</a>`;
 
     if (username) {
-        loginLink = `<a class="nav-link ${pathname === "/profilepage.html" ? "active" : ""}" href="/profilepage.html">Admin page</a>`;    
+        loginLink = `<a class="nav-link ${pathname === "/profile-page.html" ? "active" : ""}" href="/profile-page.html">Admin page</a>`;    
     }
 
     menuContainer.innerHTML = `

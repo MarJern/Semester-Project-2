@@ -15,7 +15,7 @@ export async function listProducts(data) {
 
         data.forEach(function (products) {
             productsContainer.innerHTML += 
-            `<div class="col-md-5 col-lg-3 shadow-sm p-3 mb-5 p-0 card rounded-0">
+            `<div class="col-md-5 col-lg-3 shadow-sm p-3 m-2 card rounded-0">
                 <img src="${baseUrl + products.image.url}" class="card-img-top rounded-0 card__image" alt="${products.image.alternativeText}">
                 <div class="card-body">
                     <h3>${products.title}</h3>

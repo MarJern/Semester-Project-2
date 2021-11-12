@@ -3,17 +3,17 @@
 }
 .search__input {
     height: 30px;
-    // border-radius: 5px 0 0 5px;
+    border-radius: 5px 0 0 5px;
     border: 1px solid $colour-green-grey;
 }
-// .search__btn {
-//     height: 30px;
-//     margin-top: 0 !important;
-//     background-color: $colour-green-grey;
-//     border: $colour-green-grey;
-//     border-radius: 0 5px 5px 0;
-//     color: white;
-// }
+.search__btn {
+    height: 30px;
+    margin-top: 0 !important;
+    background-color: $colour-green-grey;
+    border: $colour-green-grey;
+    border-radius: 0 5px 5px 0;
+    color: white;
+}
 .newsletter__input {
     border: 1px solid $colour-green-grey;
 }

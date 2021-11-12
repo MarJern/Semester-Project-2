@@ -1,7 +1,6 @@
 html, body {
     height: 100%
 }
-
 body {
     font-size: 14px;
     font-family: $font-primary;
@@ -22,7 +21,6 @@ body {
         font-weight: 500;
     }
 }
-
 .wrapper {
     flex: 1 0 auto;
     background-color: $colour-transparent-light;
@@ -32,7 +30,6 @@ body {
     background-color: $colour-green-grey;
     border: 1px solid $colour-green-grey;
 }
-
 .btn-primary:hover {
     background-color: $colour-dark-grey;
     border: none;
@@ -71,7 +68,7 @@ footer {
         font-size: 1.2rem;
     }
     i {
-        padding-left: 20px;
+        padding-left: 10px;
     }
     
 }

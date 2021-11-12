@@ -5,6 +5,3 @@ import { getFeatured } from "./components/indexpage/getFeaturedProducts.js";
 createMenu();
 getHeroImage();
 getFeatured();
-
-
-// runScript();
