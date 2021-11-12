@@ -1,7 +1,7 @@
 import { baseUrl } from "../../constants/api.js";
 import displayMessage from "../displayMessage.js";
 
-const productsURL = baseUrl + "/products";
+// const productsURL = baseUrl + "/products";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -58,25 +58,79 @@ export async function productDetails() {
         displayMessage("error", "Error when loading the product", ".product__card");
     }
 
-
     const addCartButton = document.querySelectorAll("button.cart__button");
-    console.log(addCartButton);
+        console.log(addCartButton);
 
+        addCartButton.forEach(function(button){
+            button.onclick = function(event) {
+                cartArray.push(event.target.dataset.product); 
+                console.log(cartArray);
+            //    this line should look inside the function that loops the html and finds the item with the correct id
+                // const itemToAdd = products.find(item => item.id === event.target.dataset.product);
+                // cartArray.push(itemToAdd);
+                // showCart(cartArray);
+                // localStorage.setItem("cartList", JSON.stringify(cartArray));
+            }
+        });
+};
 
-    addCartButton.forEach(function(button){
-        button.onclick = function(event) {
-        console.log(button);
-            cartArray.push(event.target.dataset.product); 
-            console.log(cartArray);
-        //    this line should look inside the function that loops the html and finds the item with the correct id
-            // const itemToAdd = products.find(item => item.id === event.target.dataset.product);
-            // cartArray.push(itemToAdd);
-            // showCart(cartArray);
-            
-        }
-    });
+function showCart(cartItems) {
+    const cartContainer = document.querySelector(".cart__container");
+    const totalContainer = document.querySelector(".total__container");
 
-    
+    cartContainer.innerHTML = "";
+    let total = 0;
+
+    cartItems.forEach(function (cartElement) {
+        total += cartElement.price;
+        cartContainer.innerHTML += `
+        <div class="row no-gutters">
+                    <div class="loading"></div>
+                    <div class="col-xs-4">
+                        <a href="#"><img src="${baseUrl + cartElement.image.url}" class="card-img cart__product__image" alt="${cartElement.image.name}"></a>
+                    </div>
+                    <div class="col-xs-8">
+                        <div class="card-body">
+                            <a href="${cartElement.id}"><h5 class="card-title">${cartElement.title}</h5></a>
+                            <p class="card-text">$${cartElement.price}</p>
+                            <div class="row edit__amount">
+                                <i class="fas fa-minus-circle"></i>
+                                <div class=""></div>
+                                <i class="fas fa-plus-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <i class="fas fa-trash-alt"></i>
+                    </div>
+                </div>`;
+    })
+
+    totalContainer.innerHTML = 
+    `<h2>Order Summary</h2>
+    <p>You order:</p>
+    <div class="table-responsive table-sm">
+        <table class="table">
+            <tr>
+                <td>Subtotal:</td>
+                <td>$${total}</td>
+            </tr>
+            <tr>
+                <td>Shipping:</td>
+                <td>Free Shipping</td>
+            </tr>
+        </table>
+    </div>
+    <hr/>
+    <div class="table-responsive table-sm">
+        <table class="table">
+            <tr>
+                <td>Total:</td>
+                <td>$${total}</td>
+            </tr>
+        </table>
+    </div>
+    <a href="#" class="btn btn-primary">To Checkout</a>`;
 
 };
 
